@@ -1,0 +1,94 @@
+
+refresh-on-startup yes
+scrolloff 15
+show-read-feeds yes 
+show-read-articles  yes
+auto-reload yes
+max-items 100
+
+# unbind keys
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key ^D pagedown
+bind-key ^U pageup
+bind-key b toggle-source-view
+bind-key U toggle-show-read-feeds
+bind-key u show-urls
+bind-key g home
+bind-key G end
+bind-key b open-in-browser-and-mark-read
+bind-key B open-in-browser
+bind-key i sort
+bind-key I rev-sort
+bind-key SPACE macro-prefix 
+
+#Color Schemes
+
+# col # item              # fg      # bg
+color background         	color236	default
+color listnormal          color248  default
+color listnormal_unread   color24		default
+color listfocus           color236  color12
+color listfocus_unread    color15   color12
+color info                color248  color236
+color article             color248  default
+
+#color listnormal default default
+#color listfocus default default reverse
+#color listnormal_unread default default bold
+#color listfocus_unread default default bold underline
+#color info red black bold
+#color article default default
+
+highlight article "^Feed:.*" magenta default 
+highlight article "^Title:.*" yellow default bold
+highlight article "^Author:.*" green default
+highlight article "^Date:.*" color223 default
+highlight article "^Link:.*" blue default
+highlight article "^Flags:.*" color9 default
+highlight article "\\[[0-9][0-9]*\\]" color66 default bold
+highlight article "\\[image [0-9][0-9]*\\]" color109 default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" color66 default bold
+
+#highlight feedlist "[╒╘╞]═.*═[╛╕╡]" yellow default bold
+highlight feedlist "[║│]" cyan	default bold
+highlight feedlist "╠═.*" cyan	default bold
+
+highlight feedlist "\\(Youtube\\) .*" color100
+highlight feedlist "\\(Finance\\) .*" color49
+highlight feedlist "\\(Linux\\) .*" green
+highlight feedlist "\\(Technology\\) .*" magenta
+highlight feedlist "\\(Blog\\) .*" color166
+#highlight feedlist "\\(Reddit\\) .*" color166 
+
+
+feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═════════════════════════════════════════════════════%t?"
+#feedlist-format "%?T?║%4i %n %8u (%T) %t &╠%=═0%t?"
+#feedlist-format "%?T?║%4i %n %8u (%T) %t &%==11first%=x16SECOND%=~13third?"
+
+# external browser
+#browser firefox
+#browser "xdg-open '%u'" &&
+browser "open -a 'firefox'"
+#browser "/usr/local/bin/firefox %u" # This location is for MacOS
+
+macro 3 set browser "setsid --fork mpv --profile=361p %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";
+macro 7 set browser "setsid --fork mpv --profile=720p %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";
+macro f set browser "setsid --fork xdg-open %u > /dev/null 2>&1"; open-in-browser; set browser "xdg-open %u";
+macro q quit
+
+#browser brave
+#macro w set browser "w3m %u"; open-in-browser ; set browser "brave %u"
+#macro m set browser "mpv %u"; open-in-browser ; set browser "brave %u"
+
+#macro t pipe-to openreddit.sh
+#macro y pipe-to newsboat-youtube.sh
+#macro p pipe-to newsboat-podcast.sh

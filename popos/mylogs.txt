@@ -1,0 +1,48 @@
+ This is a log of my activities on Linux :
+ 
+********************** Beginning of log ************************                     
+
+I installed an application called "exa" which is like "ls"
+However this application does not working in Linux properly because "git" is not enable by default in linux
+SO if you install it using "apt instal" it will not display some flag with -git in it
+
+
+So I had to build it file using CARGO
+Cargo stores all its binary files in  HOME/.cargo/bin
+SO I had to include this in the profile path of my bash which loads up when we start the computer.
+This is in "/etc/profile"
+
+The following path is saved in (above location) Permanently 
+PATH="$HOME/.cargo/bin:$PATH"
+
+If I want to temporarily save this path, type (below) in terminal : 
+export PATH="$HOME/.cargo/bin:$PATH"
+
+********************** ending of above log ************************
+
+********************** Start of Next Log************************
+so here I have added fonts to the OS.
+Until today I didn't know, how the terminal was show all these fonts.
+Now I know !
+So what happens if the you save the font in ~/.usr/share/font : This is for local user
+This is for system wide user ~/.local/share/fonts  OR  /usr/local/share/fonts (both for system wide)
+You can download fonts from "Font Awesome" website Here you find "Nerdfonts" 
+Another font I downloaded was called "Meslo" not related to font awesome
+
+Then you basically sudo apt install the font or you manually, 'cp' the font folder to "~user/share/fonts" ( for system wide ) OR /usr/local/share/fonts (for SYSTEM wide)
+
+Now you open the config file of your terminal and from preferences you basically change the font to one of the above for e.g. choose "Meslo" in the preferences.
+
+Your terminal will automatically start showing the fonts.
+
+********************** ending of above log ************************
+
+***********Start ***********************
+How I add OH my fish. 
+Its aan amazing powerlin tool.
+Very easy to manager
+watch ermanno video
+typcial command ---> omf install <press TAB>
+>>>> eg theme name batman
+>>>> eg plugin name hello world
+***************************************

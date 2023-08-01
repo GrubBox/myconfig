@@ -1,0 +1,32 @@
+
+Terminals :
+Kitty						Better Than Alacritty. Press "(Cntl)(Shift)(F2)" To Go To Config
+Terminator			Great Terminal, Uses Tabs(H),Similar To Tilix 
+Tilix		 				Great Terminal, Uses Tabs(V),Better Than Gnome-Terminal
+
+Misc  :
+Exa  						This Beautiful Package Which I Installed In Mac And Linux Is Better Vision Ls
+Powerlevel10k		This A Theme For Zsh
+Arianna					Book
+Brave						Browser
+Firefox					Browser
+Transmission  	Torrent
+Neovim					Text Editor
+Gparted					Disk Eraser
+Vlc							Media Player
+Omf						  Oh My Fish To Beautify Fish
+Tide						Similar To Powerlevel 10k But In Fish
+Poweverlevel10k	Zsh Prompt Is Made Pretty
+
+
+
+
+Deleted :
+Alacritty 			No Split Pane Option, No Gui Config, Kitty Is Better
+
+Commands
+
+Sed 		Replaces A String In The Text. 
+Grep		Searches For A Text
+Awk			Does All The Above And More Like A Programming Language
+
