@@ -40,3 +40,7 @@ alias la="exa --long --tree --level=3 --icons"
 alias .config="cd ~/.config/"
 alias boat="cd ~/Developer/myconfig/.newsboat"
 end
+
+# Setting PATH for Python 3.12
+# The original version is saved in /Users/sandeepvk/.config/fish/config.fish.pysave
+set -x PATH "/Library/Frameworks/Python.framework/Versions/3.12/bin" "$PATH"
